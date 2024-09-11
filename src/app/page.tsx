@@ -1,8 +1,9 @@
 import HeroGrid from "@/components/gradient";
-import Hero from "./_components/hero-section";
+import Line from "@/components/ui/line";
 import Cta from "./_components/cta";
-import Features from "./_components/features";
-import Services from "./_components/services";
+import Hero from "./_components/hero-section";
+import Services from "./_components/services-test";
+import { Features } from "./_components/features";
 
 export default function Home() {
   return (
@@ -11,7 +12,9 @@ export default function Home() {
       <Hero />
 
       <Features />
-      <Services />
+      <Line>
+        <Services />
+      </Line>
       <Cta />
     </main>
   );

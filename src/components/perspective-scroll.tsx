@@ -5,7 +5,7 @@ import Pic2 from "../../public/images/hero-image.jpg";
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 import { useRef } from "react";
 import Features from "@/app/_components/features";
-import Services from "@/app/_components/services";
+import Services from "@/app/_components/services-test";
 
 export default function PerspectiveScroll() {
   const container = useRef<HTMLDivElement>(null);

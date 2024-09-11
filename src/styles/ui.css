@@ -14,7 +14,7 @@
   animation: dotScroll 16s linear infinite;
   background-image: radial-gradient(
     circle,
-    hsla(var(--primary), 0.15) var(--dot-size),
+    hsla(var(--dot), 0.15) var(--dot-size),
     transparent 0
   );
   background-size: calc(14.2857142857% - 1px) 100px;
