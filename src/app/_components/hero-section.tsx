@@ -1,17 +1,29 @@
 import GlowButton from "@/components/glow-button";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { TextHoverEffect } from "@/components/ui/text-hover-reveal";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import Image from "next/image";
+import HeroSlider from "./hero-slider";
+import SparklesText from "@/components/magicui/sparkles-text";
 
 export default function Hero() {
   return (
     <section className="mt-24 text-center">
-      <h1 className="text-6xl font-bold text-green">
+      <SparklesText
+        sparklesCount={5}
+        colors={{ first: "#eab308", second: "#eab308" }}
+        text={"Capturing Moments,"}
+        className="font-bold text-green"
+      />
+      <SparklesText
+        sparklesCount={5}
+        colors={{ first: "#2dd4bf", second: "#eab308" }}
+        text={"Crafting Memories"}
+        className="font-bold text-green"
+      />
+      {/* <h1 className="text-6xl font-bold text-green">
         Capturing Moments,
         <br />
         Crafting Memories
-      </h1>
+      </h1> */}
       <p className="mt-4 text-lg font-light text-muted-foreground">
         In a lens, we see,
         <br />
@@ -26,15 +38,8 @@ export default function Hero() {
       <div className="relative mx-auto">
         <TextHoverEffect text="ZOOMIN" />
         <div className="relative mx-auto -mt-16 aspect-video max-w-2xl md:-mt-4 lg:-mt-72">
-          <ArrowLeft className="absolute -left-4 top-1/2 z-10 size-8 -translate-y-1/2 cursor-pointer rounded-full bg-green-950 p-2 text-green backdrop-blur-md transition-colors hover:bg-green-900/50" />
-          <Image
-            src="/images/hero-image.jpg"
-            fill
-            alt=""
-            className="rounded-xl object-cover"
-          />
-          <ArrowRight className="absolute -right-4 top-1/2 z-10 size-8 -translate-y-1/2 cursor-pointer rounded-full bg-green-950 p-2 text-green backdrop-blur-md transition-colors hover:bg-green-900/50" />
-          <span className="absolute left-1/2 top-0 -z-50 size-40 -translate-x-1/2 rounded-full bg-green-600 blur-[200px]" />
+          <HeroSlider />
+          <span className="absolute left-1/2 top-0 -z-50 size-40 -translate-x-1/2 rounded-full bg-green-600 blur-[120px] md:blur-[200px]" />
         </div>
         <div className="mt-3 flex w-full flex-col items-center justify-center overflow-hidden rounded-md">
           <div className="relative h-40 w-[40rem]">

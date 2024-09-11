@@ -13,7 +13,7 @@ export default function HeroGrid() {
         aria-hidden
         priority
       />
-      <span className="absolute right-0 top-0 size-40 rounded-full bg-green-700 blur-[200px]" />
+      <span className="absolute -top-8 right-0 size-40 rounded-full bg-green-700 blur-[200px]" />
     </>
   );
 }

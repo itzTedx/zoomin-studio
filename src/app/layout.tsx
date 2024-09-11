@@ -1,10 +1,10 @@
+import BreakpointIndicator from "@/components/breakpoint-indicator";
+import Navbar from "@/components/layout/navbar";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import { Bricolage_Grotesque } from "next/font/google";
+import localFont from "next/font/local";
 import "../styles/globals.css";
 import "../styles/ui.css";
-import Navbar from "@/components/layout/navbar";
-import BreakpointIndicator from "@/components/breakpoint-indicator";
 
 const mdn = localFont({
   src: "../fonts/MDN-Black.woff2",
