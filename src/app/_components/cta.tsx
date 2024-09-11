@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 export default function Cta() {
   return (
     <>
-      <section className="relative my-60">
+      <section className="relative mt-40 md:my-60">
         <div className="mx-auto flex h-36 max-w-5xl items-end justify-end rounded-3xl bg-green-100/10 p-6 px-9 backdrop-blur-xl sm:h-48 md:h-64">
           <ArrowRight className="absolute -left-4 top-1/2 z-10 size-8 -translate-y-1/2 cursor-pointer rounded-full bg-green-950 p-2 text-green backdrop-blur-md transition-colors hover:bg-green-900/50" />
           <div className="absolute left-8 flex flex-col items-start md:gap-4">

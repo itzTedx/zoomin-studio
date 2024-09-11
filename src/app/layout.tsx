@@ -5,6 +5,7 @@ import { Bricolage_Grotesque } from "next/font/google";
 import localFont from "next/font/local";
 import "../styles/globals.css";
 import "../styles/ui.css";
+import Footer from "@/components/layout/footer";
 
 const mdn = localFont({
   src: "../fonts/MDN-Black.woff2",
@@ -34,6 +35,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
         <BreakpointIndicator />
       </body>
     </html>

@@ -62,7 +62,8 @@ export const TextHoverEffect = ({
           id="revealMask"
           gradientUnits="userSpaceOnUse"
           r="20%"
-          animate={maskPosition}
+          whileInView={maskPosition}
+          viewport={{ once: true }}
           transition={{
             duration: duration ?? 0,
             ease: "easeOut",
@@ -98,7 +99,7 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className="font-bricolage fill-transparent stroke-green-200 text-7xl font-black dark:stroke-green-900"
+        className="fill-transparent stroke-green-200 font-bricolage text-7xl font-black dark:stroke-green-900"
         style={{ opacity: hovered ? 0.7 : 0 }}
       >
         {text}
@@ -109,9 +110,9 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className="font-bricolage fill-transparent stroke-green-200 text-7xl font-black dark:stroke-green-800"
+        className="fill-transparent stroke-green-200 font-bricolage text-7xl font-black dark:stroke-green-800"
         initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
-        animate={{
+        whileInView={{
           strokeDashoffset: 0,
           strokeDasharray: 1000,
         }}
@@ -130,7 +131,7 @@ export const TextHoverEffect = ({
         stroke="url(#textGradient)"
         strokeWidth="0.3"
         mask="url(#textMask)"
-        className="font-bricolage fill-transparent text-7xl font-black"
+        className="fill-transparent font-bricolage text-7xl font-black"
       >
         {text}
       </text>
