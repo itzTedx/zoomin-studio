@@ -1,11 +1,9 @@
 "use client";
-import Image from "next/image";
-import Pic1 from "../../public/images/hero-image.jpg";
-import Pic2 from "../../public/images/hero-image.jpg";
-import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
-import { useRef } from "react";
-import Features from "@/app/_components/features";
+
+import { Features } from "@/app/_components/features";
 import Services from "@/app/_components/services-test";
+import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export default function PerspectiveScroll() {
   const container = useRef<HTMLDivElement>(null);

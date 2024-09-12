@@ -41,29 +41,29 @@ export default function ServiceModal({ modal, projects }: ModalProps) {
       return;
 
     // Move Container
-    let xMoveContainer = gsap.quickTo(modalContainer.current, "left", {
+    const xMoveContainer = gsap.quickTo(modalContainer.current, "left", {
       duration: 0.8,
       ease: "power3",
     });
-    let yMoveContainer = gsap.quickTo(modalContainer.current, "top", {
+    const yMoveContainer = gsap.quickTo(modalContainer.current, "top", {
       duration: 0.8,
       ease: "power3",
     });
     // Move cursor
-    let xMoveCursor = gsap.quickTo(cursor.current, "left", {
+    const xMoveCursor = gsap.quickTo(cursor.current, "left", {
       duration: 0.5,
       ease: "power3",
     });
-    let yMoveCursor = gsap.quickTo(cursor.current, "top", {
+    const yMoveCursor = gsap.quickTo(cursor.current, "top", {
       duration: 0.5,
       ease: "power3",
     });
     // Move cursor label
-    let xMoveCursorLabel = gsap.quickTo(cursorLabel.current, "left", {
+    const xMoveCursorLabel = gsap.quickTo(cursorLabel.current, "left", {
       duration: 0.45,
       ease: "power3",
     });
-    let yMoveCursorLabel = gsap.quickTo(cursorLabel.current, "top", {
+    const yMoveCursorLabel = gsap.quickTo(cursorLabel.current, "top", {
       duration: 0.45,
       ease: "power3",
     });
