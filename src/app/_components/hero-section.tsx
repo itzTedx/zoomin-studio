@@ -3,41 +3,49 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import { TextHoverEffect } from "@/components/ui/text-hover-reveal";
 import HeroSlider from "./hero-slider";
 import SparklesText from "@/components/magicui/sparkles-text";
+import Social from "@/components/social";
 
 export default function Hero() {
   return (
     <section className="mt-24 text-center">
-      <SparklesText
-        sparklesCount={5}
-        colors={{ first: "#eab308", second: "#eab308" }}
-        text={"Capturing Moments,"}
-        className="font-bold text-green"
-      />
-      <SparklesText
-        sparklesCount={5}
-        colors={{ first: "#2dd4bf", second: "#eab308" }}
-        text={"Crafting Memories"}
-        className="font-bold text-green"
-      />
-      {/* <h1 className="text-6xl font-bold text-green">
+      <div className="relative">
+        <SparklesText
+          sparklesCount={5}
+          colors={{ first: "#eab308", second: "#eab308" }}
+          text={"Capturing Moments,"}
+          className="font-bold text-green"
+        />
+        <SparklesText
+          sparklesCount={5}
+          colors={{ first: "#2dd4bf", second: "#eab308" }}
+          text={"Crafting Memories"}
+          className="font-bold text-green"
+        />
+        {/* <h1 className="text-6xl font-bold text-green">
         Capturing Moments,
         <br />
         Crafting Memories
-      </h1> */}
-      <p className="mt-4 text-lg font-light text-muted-foreground">
-        In a lens, we see,
-        <br />
-        The beauty of love unfold,
-        <br />
-        Grace in every shot.
-      </p>
-      <GlowButton className="mx-auto mt-8 w-fit font-bold" href="/gallery" icon>
-        Explore Our Portfolio
-      </GlowButton>
+        </h1> */}
+        <p className="mt-4 text-lg font-light text-muted-foreground">
+          In a lens, we see,
+          <br />
+          The beauty of love unfold,
+          <br />
+          Grace in every shot.
+        </p>
+        <GlowButton
+          className="mx-auto mt-8 w-fit font-bold"
+          href="/gallery"
+          icon
+        >
+          Explore Our Portfolio
+        </GlowButton>
+        <Social />
+      </div>
 
-      <div className="relative mx-auto">
+      <div className="relative mx-auto max-w-6xl">
         <TextHoverEffect text="ZOOMIN" />
-        <div className="relative mx-auto -mt-16 aspect-video max-w-2xl md:-mt-4 lg:-mt-72">
+        <div className="relative mx-auto -mt-16 aspect-video max-w-2xl md:-mt-4 lg:-mt-56">
           <HeroSlider />
           <span className="absolute left-1/2 top-0 -z-50 size-40 -translate-x-1/2 rounded-full bg-green-600 blur-[120px] md:blur-[200px]" />
         </div>

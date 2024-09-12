@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="container">
+    <footer className="bg-background">
       <TextHoverEffect text="ZOOMIN" />
-      <nav className="pb-12">
+      <nav className="container pb-12">
         <ul>
           {NAV.map((item) => (
             <li key={item.href}>
