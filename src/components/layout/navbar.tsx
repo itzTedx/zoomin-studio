@@ -103,62 +103,64 @@ export default function Navbar() {
             </div>
           </Link>
         </div>
-
-        <Drawer setBackgroundColorOnScale={false}>
-          <DrawerTrigger>
-            <IconMenu4 />
-          </DrawerTrigger>
-          <DrawerContent>
-            <DrawerHeader className="border-b">
-              <DrawerClose asChild>
-                <Link href="/" className="mx-auto w-fit">
-                  <Logo />
-                </Link>
-              </DrawerClose>
-
-              <DrawerDescription>A Visual Storyteller</DrawerDescription>
-              {/* <DrawerClose className="absolute right-0">
-                <Button variant="ghost" className="text-muted">
-                  <X />
-                </Button>
-              </DrawerClose> */}
-            </DrawerHeader>
-            <nav className="py-9">
-              <menu className="flex w-full flex-col items-center gap-6 bg-transparent">
-                {NAV.map((link, i) => {
-                  const isActive = pathname.startsWith(link.href);
-
-                  return (
-                    <li key={i}>
-                      <DrawerClose asChild>
-                        <Link
-                          href={link.href}
-                          className={"relative flex items-center py-4 text-xl"}
-                          aria-label={`Visit ${link.title} page`}
-                        >
-                          <RevealText>{link.title}</RevealText>
-                          {isActive ? <Span /> : null}
-                        </Link>
-                      </DrawerClose>
-                    </li>
-                  );
-                })}
-                <li>
-                  <Link
-                    href="/contact"
-                    className={cn(
-                      buttonVariants({ variant: "outline" }),
-                      "ml-3 bg-transparent",
-                    )}
-                  >
-                    <RevealText>{`Book\xa0Now!`}</RevealText>
+        <div className="block sm:hidden">
+          <Drawer setBackgroundColorOnScale={false}>
+            <DrawerTrigger>
+              <IconMenu4 />
+            </DrawerTrigger>
+            <DrawerContent>
+              <DrawerHeader className="border-b">
+                <DrawerClose asChild>
+                  <Link href="/" className="mx-auto w-fit">
+                    <Logo />
                   </Link>
-                </li>
-              </menu>
-            </nav>
-          </DrawerContent>
-        </Drawer>
+                </DrawerClose>
 
+                <DrawerDescription>A Visual Storyteller</DrawerDescription>
+                {/* <DrawerClose className="absolute right-0">
+                <Button variant="ghost" className="text-muted">
+                <X />
+                </Button>
+                </DrawerClose> */}
+              </DrawerHeader>
+              <nav className="py-9">
+                <menu className="flex w-full flex-col items-center gap-6 bg-transparent">
+                  {NAV.map((link, i) => {
+                    const isActive = pathname.startsWith(link.href);
+
+                    return (
+                      <li key={i}>
+                        <DrawerClose asChild>
+                          <Link
+                            href={link.href}
+                            className={
+                              "relative flex items-center py-4 text-xl"
+                            }
+                            aria-label={`Visit ${link.title} page`}
+                          >
+                            <RevealText>{link.title}</RevealText>
+                            {isActive ? <Span /> : null}
+                          </Link>
+                        </DrawerClose>
+                      </li>
+                    );
+                  })}
+                  <li>
+                    <Link
+                      href="/contact"
+                      className={cn(
+                        buttonVariants({ variant: "outline" }),
+                        "ml-3 bg-transparent",
+                      )}
+                    >
+                      <RevealText>{`Book\xa0Now!`}</RevealText>
+                    </Link>
+                  </li>
+                </menu>
+              </nav>
+            </DrawerContent>
+          </Drawer>
+        </div>
         <span
           className={cn(
             "absolute -top-3 -z-50 h-[150%] w-full bg-gradient-to-b from-background/80 to-transparent transition-opacity duration-500 ease-in-out max-sm:left-0 lg:inset-x-14",
