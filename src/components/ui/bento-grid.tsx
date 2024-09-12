@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import SwapText from "../magicui/swap-text";
 
 export const BentoGrid = ({
   className,
@@ -40,15 +41,27 @@ export const BentoGridItem = ({
       )}
     >
       {header}
-      <div className="transition duration-200 group-hover/bento:translate-x-2">
-        <div className="mb-2 mt-2 flex gap-2 font-sans text-xl font-bold text-primary">
+      {/* <div className="transition duration-200 group-hover/bento:translate-x-2"> */}
+
+      <SwapText
+        initialText={title as string}
+        icon={icon}
+        finalText={description as string}
+        disableClick
+        // Set min height so that all the text content fits
+        // use -mb-7 to hide the extra space when not active
+        className="hidden min-h-14 w-full pt-4 transition-all duration-200 group-hover:mb-0 md:flex md:flex-col"
+        initialTextClassName="group-hover:opacity-0 h-full duration-200 flex gap-2 font-sans text-xl font-bold text-primary"
+        finalTextClassName="text-sm h-full duration-200 font-medium text-gray-500"
+      />
+      {/* <div className="mb-2 mt-2 flex gap-2 font-sans text-xl font-bold text-primary">
           {icon}
           {title}
         </div>
         <div className="font-sans text-xs text-muted-foreground">
           {description}
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </div>
   );
 };
