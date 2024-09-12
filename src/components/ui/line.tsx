@@ -98,7 +98,7 @@ export default function Line({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <div className="flex w-fit flex-col items-end">
+    <div className="flex w-full flex-col">
       <div className="relative mb-5 h-px w-full">
         <div
           onMouseEnter={() => {

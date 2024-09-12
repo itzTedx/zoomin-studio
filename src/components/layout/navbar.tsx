@@ -11,6 +11,7 @@ import Logo from "./logo";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "../ui/button";
+import { RevealText } from "../magicui/reveal-text";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -51,14 +52,7 @@ export default function Navbar() {
                   className={"relative flex items-center gap-1.5 px-4"}
                   aria-label={`Visit ${link.title} page`}
                 >
-                  <span
-                    className={cn(
-                      isActive && "z-10 text-foreground",
-                      "hidden md:block",
-                    )}
-                  >
-                    {link.title}
-                  </span>
+                  <RevealText>{link.title}</RevealText>
                   {isActive ? <Span /> : null}
                 </Link>
               </li>
@@ -72,7 +66,7 @@ export default function Navbar() {
                 "ml-3 bg-transparent",
               )}
             >
-              Book Now!
+              <RevealText>{`Book\xa0Now!`}</RevealText>
             </Link>
           </li>
         </menu>
