@@ -49,7 +49,7 @@ export default function Hero() {
           <HeroSlider />
           <span className="absolute left-1/2 top-0 -z-50 size-40 -translate-x-1/2 rounded-full bg-green-600 blur-[120px] md:blur-[200px]" />
         </div>
-        <div className="mt-3 flex w-full flex-col items-center justify-center overflow-hidden rounded-md">
+        <div className="mt-3 flex w-full flex-col items-center justify-center overflow-hidden rounded-md max-sm:hidden">
           <div className="relative h-40 w-[40rem]">
             {/* Gradients */}
             <div className="absolute inset-x-20 top-0 h-[2px] w-3/4 bg-gradient-to-r from-transparent via-indigo-500 to-transparent blur-sm" />

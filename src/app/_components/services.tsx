@@ -6,11 +6,11 @@ import React, { useRef } from "react";
 
 export const Services = () => {
   return (
-    <section className="mt-20 p-4 md:p-8">
+    <section className="mt-20 md:p-8">
       <h2 className="my-4 font-mdn text-5xl tracking-wide text-green">
         What we do?
       </h2>
-      <p className="mb-12 font-light text-muted-foreground">
+      <p className="mb-4 font-light text-muted-foreground md:mb-12">
         Discover our exclusive services designed to turn moments into lasting
         memories.
       </p>
@@ -107,7 +107,7 @@ const Link = ({ heading, imgSrc, subheading, href }: LinkProps) => {
             staggerChildren: 0.075,
             delayChildren: 0.25,
           }}
-          className="relative z-10 block text-4xl font-bold text-muted-foreground transition-colors duration-300 group-hover:text-foreground md:text-6xl"
+          className="relative z-10 block text-2xl font-bold text-muted-foreground transition-colors duration-300 group-hover:text-foreground sm:text-4xl md:text-6xl"
         >
           {heading.split("").map((l, i) => (
             <motion.span
@@ -123,7 +123,7 @@ const Link = ({ heading, imgSrc, subheading, href }: LinkProps) => {
             </motion.span>
           ))}
         </motion.span>
-        <span className="relative z-10 mt-2 block text-base text-muted-foreground transition-colors duration-500 group-hover:text-foreground">
+        <span className="relative z-10 block text-sm text-muted-foreground/60 transition-colors duration-500 group-hover:text-foreground sm:mt-2 sm:text-base">
           {subheading}
         </span>
       </div>

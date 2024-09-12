@@ -31,12 +31,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bricolage.className} ${mdn.variable} dark relative antialiased`}
+        className={`${bricolage.className} ${mdn.variable} dark relative scroll-smooth antialiased`}
       >
-        <Navbar />
-        {children}
-        <Footer />
-        <BreakpointIndicator />
+        <div vaul-drawer-wrapper="">
+          <Navbar />
+          {children}
+          <Footer />
+          <BreakpointIndicator />
+        </div>
       </body>
     </html>
   );
